@@ -1,0 +1,198 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|c:\\users\\dell\\desktop\\teacherfoldermanagment\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|solutionrelative:controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|solutionrelative:app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\controllers\\covereddetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|solutionrelative:controllers\\covereddetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|solutionrelative:models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\areas\\helppage\\xmldocumentationprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|solutionrelative:areas\\helppage\\xmldocumentationprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\controllers\\hodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|solutionrelative:controllers\\hodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|solutionrelative:controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\controllers\\foldercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|solutionrelative:controllers\\foldercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\models\\newstudentschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|solutionrelative:models\\newstudentschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\controllers\\configurationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C20554-3F6B-48DB-AEE9-5CC4B16CE074}|teacherFolderManagment.csproj|solutionrelative:controllers\\configurationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "XmlDocumentationProvider.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Areas\\HelpPage\\XmlDocumentationProvider.cs",
+              "RelativeDocumentMoniker": "Areas\\HelpPage\\XmlDocumentationProvider.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Areas\\HelpPage\\XmlDocumentationProvider.cs",
+              "RelativeToolTip": "Areas\\HelpPage\\XmlDocumentationProvider.cs",
+              "ViewState": "AgIAAAAAAAAAMzMzMzMbwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T13:23:44.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WebApiConfig.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\App_Start\\WebApiConfig.cs",
+              "RelativeDocumentMoniker": "App_Start\\WebApiConfig.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\App_Start\\WebApiConfig.cs",
+              "RelativeToolTip": "App_Start\\WebApiConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T13:07:24.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Models\\Model1.edmx",
+              "RelativeDocumentMoniker": "Models\\Model1.edmx",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Models\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "Models\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-11-19T06:20:59.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAAAAAAAAAJDMzMzP7v00AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-19T06:14:48.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CoveredDetail.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Controllers\\CoveredDetail.cs",
+              "RelativeDocumentMoniker": "Controllers\\CoveredDetail.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Controllers\\CoveredDetail.cs",
+              "RelativeToolTip": "Controllers\\CoveredDetail.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAgwAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T01:20:02.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TeacherController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Controllers\\TeacherController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TeacherController.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Controllers\\TeacherController.cs*",
+              "RelativeToolTip": "Controllers\\TeacherController.cs*",
+              "ViewState": "AgIAAA4AAADAXmZmZmYDwBcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T21:18:33.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HODController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Controllers\\HODController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HODController.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Controllers\\HODController.cs",
+              "RelativeToolTip": "Controllers\\HODController.cs",
+              "ViewState": "AgIAAOcAAACgMjMzM7MnwMIAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T20:51:04.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SettingsController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Controllers\\SettingsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SettingsController.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Controllers\\SettingsController.cs",
+              "RelativeToolTip": "Controllers\\SettingsController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAYwFQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T17:33:31.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FolderController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Controllers\\FolderController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FolderController.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Controllers\\FolderController.cs",
+              "RelativeToolTip": "Controllers\\FolderController.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAQwAMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T22:00:43.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NewStudentSchema.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Models\\NewStudentSchema.cs",
+              "RelativeDocumentMoniker": "Models\\NewStudentSchema.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Models\\NewStudentSchema.cs",
+              "RelativeToolTip": "Models\\NewStudentSchema.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T23:36:19.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ConfigurationsController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Controllers\\ConfigurationsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ConfigurationsController.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\teacherFolderManagment\\Controllers\\ConfigurationsController.cs",
+              "RelativeToolTip": "Controllers\\ConfigurationsController.cs",
+              "ViewState": "AgIAAFIBAAAAAAAAAAAAAF8BAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T17:33:06.962Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Provider => give facility to build specific widget
+
+ChangeNotifier=> work as global context
+Consumer<ProviderClassName>({context, value, child}{});

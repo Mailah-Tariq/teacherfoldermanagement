@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TeacherFolderManagementModelStoreContainer" CdmEntityContainer="TeacherFolderManagementEntities">
+    <EntitySetMapping Name="C_ActivityType">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.C_ActivityType">
+        <MappingFragment StoreEntitySet="_ActivityType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Allocation">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.Allocation">
+        <MappingFragment StoreEntitySet="Allocation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CourseInSOSId" ColumnName="CourseInSOSId" />
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+          <ScalarProperty Name="SemesterNo" ColumnName="SemesterNo" />
+          <ScalarProperty Name="TeacherGraderId" ColumnName="TeacherGraderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLO">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.CLO">
+        <MappingFragment StoreEntitySet="CLO">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CourseInSOSId" ColumnName="CourseInSOSId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Course">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.Course">
+        <MappingFragment StoreEntitySet="Course">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CourseCode" ColumnName="CourseCode" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CourseInSOS">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.CourseInSOS">
+        <MappingFragment StoreEntitySet="CourseInSOS">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SoSId" ColumnName="SoSId" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="CreditHours" ColumnName="CreditHours" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enrollment">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.Enrollment">
+        <MappingFragment StoreEntitySet="Enrollment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="AllocationId" ColumnName="AllocationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Folder">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.Folder">
+        <MappingFragment StoreEntitySet="Folder">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AllocationId" ColumnName="AllocationId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FolderCheckList">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.FolderCheckList">
+        <MappingFragment StoreEntitySet="FolderCheckList">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FolderContent">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.FolderContent">
+        <MappingFragment StoreEntitySet="FolderContent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FolderId" ColumnName="FolderId" />
+          <ScalarProperty Name="FolderCheckListId" ColumnName="FolderCheckListId" />
+          <ScalarProperty Name="FolderSubCheckListId" ColumnName="FolderSubCheckListId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FolderContentDetail">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.FolderContentDetail">
+        <MappingFragment StoreEntitySet="FolderContentDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FolderContentId" ColumnName="FolderContentId" />
+          <ScalarProperty Name="Marks" ColumnName="Marks" />
+          <ScalarProperty Name="QuestionNo" ColumnName="QuestionNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FolderContentDetailCLO">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.FolderContentDetailCLO">
+        <MappingFragment StoreEntitySet="FolderContentDetailCLO">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FolderContentDetailId" ColumnName="FolderContentDetailId" />
+          <ScalarProperty Name="CLOId" ColumnName="CLOId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FolderContentDetailCLOScore">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.FolderContentDetailCLOScore">
+        <MappingFragment StoreEntitySet="FolderContentDetailCLOScore">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FolderContentDetailCLOId" ColumnName="FolderContentDetailCLOId" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="ObtainedMarks" ColumnName="ObtainedMarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FolderContentDocument">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.FolderContentDocument">
+        <MappingFragment StoreEntitySet="FolderContentDocument">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FolderContentId" ColumnName="FolderContentId" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="CourseInSOSId" ColumnName="CourseInSOSId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FolderSubCheckList">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.FolderSubCheckList">
+        <MappingFragment StoreEntitySet="FolderSubCheckList">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FolderCheckListId" ColumnName="FolderCheckListId" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LearningObjectiveContent">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.LearningObjectiveContent">
+        <MappingFragment StoreEntitySet="LearningObjectiveContent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CLOsId" ColumnName="CLOsId" />
+          <ScalarProperty Name="PLOsId" ColumnName="PLOsId" />
+          <ScalarProperty Name="TopicId" ColumnName="TopicId" />
+          <ScalarProperty Name="Revision" ColumnName="Revision" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterSubTopic">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.MasterSubTopic">
+        <MappingFragment StoreEntitySet="MasterSubTopic">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TopicId" ColumnName="TopicId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="WeekNo" ColumnName="WeekNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterTopic">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.MasterTopic">
+        <MappingFragment StoreEntitySet="MasterTopic">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="WeekNo" ColumnName="WeekNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PLO">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.PLO">
+        <MappingFragment StoreEntitySet="PLO">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Program">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.Program">
+        <MappingFragment StoreEntitySet="Program">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SchemeOfStudy">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.SchemeOfStudy">
+        <MappingFragment StoreEntitySet="SchemeOfStudy">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="ActiveStatus" ColumnName="ActiveStatus" />
+          <ScalarProperty Name="TagName" ColumnName="TagName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Section">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.Section">
+        <MappingFragment StoreEntitySet="Section">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Session">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.Session">
+        <MappingFragment StoreEntitySet="Session">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staff">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.Staff">
+        <MappingFragment StoreEntitySet="Staff">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AridNo" ColumnName="AridNo" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="SOSId" ColumnName="SOSId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubTopic">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.SubTopic">
+        <MappingFragment StoreEntitySet="SubTopic">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TopicId" ColumnName="TopicId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="WeekNo" ColumnName="WeekNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubTopicCovered">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.SubTopicCovered">
+        <MappingFragment StoreEntitySet="SubTopicCovered">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SubTopicId" ColumnName="SubTopicId" />
+          <ScalarProperty Name="AllocationId" ColumnName="AllocationId" />
+          <ScalarProperty Name="WeekNo" ColumnName="WeekNo" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeacherGrader">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.TeacherGrader">
+        <MappingFragment StoreEntitySet="TeacherGrader">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Topic">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.Topic">
+        <MappingFragment StoreEntitySet="Topic">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TopicCovered">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.TopicCovered">
+        <MappingFragment StoreEntitySet="TopicCovered">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TopicId" ColumnName="TopicId" />
+          <ScalarProperty Name="AllocationId" ColumnName="AllocationId" />
+          <ScalarProperty Name="WeekNo" ColumnName="WeekNo" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name1" ColumnName="Name1" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRole">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRole">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TopicCLO">
+      <EntityTypeMapping TypeName="TeacherFolderManagementModel.TopicCLO">
+        <MappingFragment StoreEntitySet="TopicCLO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="TopicId" ColumnName="TopicId" />
+          <ScalarProperty Name="CLOId" ColumnName="CLOId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

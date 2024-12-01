@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1c6d8849a1c9422b9d3b089f891c0c95" Name="Diagram1" ZoomLevel="69">
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.C_ActivityType" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.Allocation" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.CLO" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.Course" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.CourseInSOS" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.Enrollment" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.Folder" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.FolderCheckList" Width="1.5" PointX="7.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.FolderContent" Width="1.5" PointX="10" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.FolderContentDetail" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.FolderContentDetailCLO" Width="1.5" PointX="7.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.FolderContentDetailCLOScore" Width="1.5" PointX="9.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.FolderContentDocument" Width="1.5" PointX="11.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.FolderSubCheckList" Width="1.5" PointX="11.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.LearningObjectiveContent" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.MasterSubTopic" Width="1.5" PointX="11.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.MasterTopic" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.PLO" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.Program" Width="1.5" PointX="0.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.Role" Width="1.5" PointX="3" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.SchemeOfStudy" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.Section" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.Session" Width="1.5" PointX="3" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.Staff" Width="1.5" PointX="13.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.Student" Width="1.5" PointX="13.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.SubTopic" Width="1.5" PointX="5.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.SubTopicCovered" Width="1.5" PointX="7.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.TeacherGrader" Width="1.5" PointX="9.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.Topic" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.TopicCovered" Width="1.5" PointX="13.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.User" Width="1.5" PointX="3" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.UserRole" Width="1.5" PointX="5.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeacherFolderManagementModel.TopicCLO" Width="1.5" PointX="11.75" PointY="13.75" IsExpanded="true" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__Allocatio__CouseInSOS__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__Allocatio__Secti__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__Allocatio__UserI__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__LearningO__CLOsI__7A672E12" ManuallyRouted="false" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__CourseInS__Cours__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__Topic__CourseId__7F2BE32F" ManuallyRouted="false" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__CourseInS__SoSId__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__SubFolder__SubFo__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__SubFolder__SubFo__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__LearningO__Cours__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__LearningO__PLOsI__0A9D95DB" ManuallyRouted="false" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__LearningO__Revis__7D439ABD" ManuallyRouted="false" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__PLOs__ProgramId__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__UserRole__RoleId__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__SubTopic__TopicI__7F2BE32F" ManuallyRouted="false" />
+        <AssociationConnector Association="TeacherFolderManagementModel.FK__UserRole__UserId__4D94879B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

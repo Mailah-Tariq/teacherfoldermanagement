@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TeacherFolderManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="_ActivityType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Allocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CourseInSOSId" Type="int" />
+    <Property Name="SectionId" Type="int" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="SessionId" Type="int" />
+    <Property Name="SemesterNo" Type="int" />
+    <Property Name="TeacherGraderId" Type="int" />
+  </EntityType>
+  <EntityType Name="CLO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1024" />
+    <Property Name="CourseInSOSId" Type="int" />
+  </EntityType>
+  <EntityType Name="Course">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CourseCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CourseInSOS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SoSId" Type="int" />
+    <Property Name="CourseId" Type="int" />
+    <Property Name="CreditHours" Type="int" />
+    <Property Name="UserId" Type="int" />
+  </EntityType>
+  <EntityType Name="Enrollment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentId" Type="int" />
+    <Property Name="AllocationId" Type="int" />
+  </EntityType>
+  <EntityType Name="Folder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AllocationId" Type="int" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="FolderCheckList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Flag" Type="int" />
+  </EntityType>
+  <EntityType Name="FolderContent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FolderId" Type="int" />
+    <Property Name="FolderCheckListId" Type="int" />
+    <Property Name="FolderSubCheckListId" Type="int" />
+  </EntityType>
+  <EntityType Name="FolderContentDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FolderContentId" Type="int" />
+    <Property Name="Marks" Type="int" />
+    <Property Name="QuestionNo" Type="int" />
+  </EntityType>
+  <EntityType Name="FolderContentDetailCLO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FolderContentDetailId" Type="int" Nullable="false" />
+    <Property Name="CLOId" Type="int" />
+  </EntityType>
+  <EntityType Name="FolderContentDetailCLOScore">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FolderContentDetailCLOId" Type="int" />
+    <Property Name="StudentId" Type="int" />
+    <Property Name="ObtainedMarks" Type="int" />
+  </EntityType>
+  <EntityType Name="FolderContentDocument">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FolderContentId" Type="int" Nullable="false" />
+    <Property Name="DisplayName" Type="nvarchar" MaxLength="200" />
+    <Property Name="FilePath" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CourseInSOSId" Type="int" />
+  </EntityType>
+  <EntityType Name="FolderSubCheckList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="FolderCheckListId" Type="int" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="SessionId" Type="int" />
+  </EntityType>
+  <EntityType Name="LearningObjectiveContent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLOsId" Type="int" />
+    <Property Name="PLOsId" Type="int" />
+    <Property Name="TopicId" Type="int" />
+    <Property Name="Revision" Type="int" />
+  </EntityType>
+  <EntityType Name="MasterSubTopic">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TopicId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="WeekNo" Type="int" />
+  </EntityType>
+  <EntityType Name="MasterTopic">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="CourseId" Type="int" />
+    <Property Name="WeekNo" Type="int" />
+  </EntityType>
+  <EntityType Name="PLO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ProgramId" Type="int" />
+  </EntityType>
+  <EntityType Name="Program">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ShortName" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SchemeOfStudy">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProgramId" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" />
+    <Property Name="ActiveStatus" Type="bit" />
+    <Property Name="TagName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Session">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Flag" Type="bit" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserId" Type="int" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AridNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="10" />
+    <Property Name="SOSId" Type="int" />
+  </EntityType>
+  <EntityType Name="SubTopic">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TopicId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="WeekNo" Type="int" />
+  </EntityType>
+  <EntityType Name="SubTopicCovered">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubTopicId" Type="int" />
+    <Property Name="AllocationId" Type="int" />
+    <Property Name="WeekNo" Type="int" />
+    <Property Name="Flag" Type="bit" />
+  </EntityType>
+  <EntityType Name="TeacherGrader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentId" Type="int" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="SessionId" Type="int" />
+  </EntityType>
+  <EntityType Name="Topic">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="CourseId" Type="int" />
+    <Property Name="SessionId" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TeacherFolderManagement.dbo.TopicCLO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TopicCLO">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TopicId" Type="int" />
+    <Property Name="CLOId" Type="int" />
+  </EntityType>
+  <EntityType Name="TopicCovered">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="TopicId" Type="int" />
+    <Property Name="AllocationId" Type="int" />
+    <Property Name="WeekNo" Type="int" />
+    <Property Name="Flag" Type="bit" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Dob" Type="date" />
+    <Property Name="Username" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="Name1" Type="nvarchar" MaxLength="255" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="RoleId" Type="int" />
+  </EntityType>
+  <Association Name="FK__Allocatio__CouseInSOS__6FE99F9F">
+    <End Role="CourseInSOS" Type="Self.CourseInSOS" Multiplicity="0..1" />
+    <End Role="Allocation" Type="Self.Allocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CourseInSOS">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Allocation">
+        <PropertyRef Name="CourseInSOSId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Allocatio__Secti__70DDC3D8">
+    <End Role="Section" Type="Self.Section" Multiplicity="0..1" />
+    <End Role="Allocation" Type="Self.Allocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Allocation">
+        <PropertyRef Name="SectionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Allocatio__UserI__71D1E811">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Allocation" Type="Self.Allocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Allocation">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CourseInS__Cours__6A30C649">
+    <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+    <End Role="CourseInSOS" Type="Self.CourseInSOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CourseInSOS">
+        <PropertyRef Name="CourseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CourseInS__SoSId__693CA210">
+    <End Role="SchemeOfStudy" Type="Self.SchemeOfStudy" Multiplicity="0..1" />
+    <End Role="CourseInSOS" Type="Self.CourseInSOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SchemeOfStudy">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CourseInSOS">
+        <PropertyRef Name="SoSId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LearningO__CLOsI__7A672E12">
+    <End Role="CLO" Type="Self.CLO" Multiplicity="0..1" />
+    <End Role="LearningObjectiveContent" Type="Self.LearningObjectiveContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LearningObjectiveContent">
+        <PropertyRef Name="CLOsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LearningO__Cours__0B91BA14">
+    <End Role="Topic" Type="Self.Topic" Multiplicity="0..1" />
+    <End Role="LearningObjectiveContent" Type="Self.LearningObjectiveContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Topic">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LearningObjectiveContent">
+        <PropertyRef Name="TopicId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LearningO__PLOsI__0A9D95DB">
+    <End Role="PLO" Type="Self.PLO" Multiplicity="0..1" />
+    <End Role="LearningObjectiveContent" Type="Self.LearningObjectiveContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PLO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LearningObjectiveContent">
+        <PropertyRef Name="PLOsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LearningO__Revis__7D439ABD">
+    <End Role="Session" Type="Self.Session" Multiplicity="0..1" />
+    <End Role="LearningObjectiveContent" Type="Self.LearningObjectiveContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Session">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LearningObjectiveContent">
+        <PropertyRef Name="Revision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PLOs__ProgramId__04E4BC85">
+    <End Role="Program" Type="Self.Program" Multiplicity="0..1" />
+    <End Role="PLO" Type="Self.PLO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PLO">
+        <PropertyRef Name="ProgramId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SubFolder__SubFo__5FB337D6">
+    <End Role="Folder" Type="Self.Folder" Multiplicity="0..1" />
+    <End Role="FolderContent" Type="Self.FolderContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Folder">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FolderContent">
+        <PropertyRef Name="FolderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SubFolder__SubFo__60A75C0F">
+    <End Role="FolderCheckList" Type="Self.FolderCheckList" Multiplicity="0..1" />
+    <End Role="FolderContent" Type="Self.FolderContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FolderCheckList">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FolderContent">
+        <PropertyRef Name="FolderCheckListId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SubTopic__TopicI__7F2BE32F">
+    <End Role="Topic" Type="Self.Topic" Multiplicity="0..1" />
+    <End Role="SubTopic" Type="Self.SubTopic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Topic">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SubTopic">
+        <PropertyRef Name="TopicId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Topic__CourseId__7F2BE32F">
+    <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+    <End Role="Topic" Type="Self.Topic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Topic">
+        <PropertyRef Name="CourseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserRole__RoleId__01142BA1">
+    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="UserRole" Type="Self.UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserRole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserRole__UserId__4D94879B">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="UserRole" Type="Self.UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserRole">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TeacherFolderManagementModelStoreContainer">
+    <EntitySet Name="_ActivityType" EntityType="Self._ActivityType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Allocation" EntityType="Self.Allocation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLO" EntityType="Self.CLO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Course" EntityType="Self.Course" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CourseInSOS" EntityType="Self.CourseInSOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Enrollment" EntityType="Self.Enrollment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Folder" EntityType="Self.Folder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FolderCheckList" EntityType="Self.FolderCheckList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FolderContent" EntityType="Self.FolderContent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FolderContentDetail" EntityType="Self.FolderContentDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FolderContentDetailCLO" EntityType="Self.FolderContentDetailCLO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FolderContentDetailCLOScore" EntityType="Self.FolderContentDetailCLOScore" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FolderContentDocument" EntityType="Self.FolderContentDocument" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FolderSubCheckList" EntityType="Self.FolderSubCheckList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LearningObjectiveContent" EntityType="Self.LearningObjectiveContent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MasterSubTopic" EntityType="Self.MasterSubTopic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MasterTopic" EntityType="Self.MasterTopic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PLO" EntityType="Self.PLO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Program" EntityType="Self.Program" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SchemeOfStudy" EntityType="Self.SchemeOfStudy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Section" EntityType="Self.Section" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Session" EntityType="Self.Session" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubTopic" EntityType="Self.SubTopic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubTopicCovered" EntityType="Self.SubTopicCovered" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeacherGrader" EntityType="Self.TeacherGrader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Topic" EntityType="Self.Topic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TopicCovered" EntityType="Self.TopicCovered" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TopicCLO" EntityType="Self.TopicCLO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TopicCLO].[id] AS [id], 
+    [TopicCLO].[TopicId] AS [TopicId], 
+    [TopicCLO].[CLOId] AS [CLOId]
+    FROM [dbo].[TopicCLO] AS [TopicCLO]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Allocatio__CouseInSOS__6FE99F9F" Association="Self.FK__Allocatio__CouseInSOS__6FE99F9F">
+      <End Role="CourseInSOS" EntitySet="CourseInSOS" />
+      <End Role="Allocation" EntitySet="Allocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Allocatio__Secti__70DDC3D8" Association="Self.FK__Allocatio__Secti__70DDC3D8">
+      <End Role="Section" EntitySet="Section" />
+      <End Role="Allocation" EntitySet="Allocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Allocatio__UserI__71D1E811" Association="Self.FK__Allocatio__UserI__71D1E811">
+      <End Role="User" EntitySet="User" />
+      <End Role="Allocation" EntitySet="Allocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CourseInS__Cours__6A30C649" Association="Self.FK__CourseInS__Cours__6A30C649">
+      <End Role="Course" EntitySet="Course" />
+      <End Role="CourseInSOS" EntitySet="CourseInSOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CourseInS__SoSId__693CA210" Association="Self.FK__CourseInS__SoSId__693CA210">
+      <End Role="SchemeOfStudy" EntitySet="SchemeOfStudy" />
+      <End Role="CourseInSOS" EntitySet="CourseInSOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LearningO__CLOsI__7A672E12" Association="Self.FK__LearningO__CLOsI__7A672E12">
+      <End Role="CLO" EntitySet="CLO" />
+      <End Role="LearningObjectiveContent" EntitySet="LearningObjectiveContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LearningO__Cours__0B91BA14" Association="Self.FK__LearningO__Cours__0B91BA14">
+      <End Role="Topic" EntitySet="Topic" />
+      <End Role="LearningObjectiveContent" EntitySet="LearningObjectiveContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LearningO__PLOsI__0A9D95DB" Association="Self.FK__LearningO__PLOsI__0A9D95DB">
+      <End Role="PLO" EntitySet="PLO" />
+      <End Role="LearningObjectiveContent" EntitySet="LearningObjectiveContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LearningO__Revis__7D439ABD" Association="Self.FK__LearningO__Revis__7D439ABD">
+      <End Role="Session" EntitySet="Session" />
+      <End Role="LearningObjectiveContent" EntitySet="LearningObjectiveContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PLOs__ProgramId__04E4BC85" Association="Self.FK__PLOs__ProgramId__04E4BC85">
+      <End Role="Program" EntitySet="Program" />
+      <End Role="PLO" EntitySet="PLO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SubFolder__SubFo__5FB337D6" Association="Self.FK__SubFolder__SubFo__5FB337D6">
+      <End Role="Folder" EntitySet="Folder" />
+      <End Role="FolderContent" EntitySet="FolderContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SubFolder__SubFo__60A75C0F" Association="Self.FK__SubFolder__SubFo__60A75C0F">
+      <End Role="FolderCheckList" EntitySet="FolderCheckList" />
+      <End Role="FolderContent" EntitySet="FolderContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SubTopic__TopicI__7F2BE32F" Association="Self.FK__SubTopic__TopicI__7F2BE32F">
+      <End Role="Topic" EntitySet="Topic" />
+      <End Role="SubTopic" EntitySet="SubTopic" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Topic__CourseId__7F2BE32F" Association="Self.FK__Topic__CourseId__7F2BE32F">
+      <End Role="Course" EntitySet="Course" />
+      <End Role="Topic" EntitySet="Topic" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserRole__RoleId__01142BA1" Association="Self.FK__UserRole__RoleId__01142BA1">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="UserRole" EntitySet="UserRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserRole__UserId__4D94879B" Association="Self.FK__UserRole__UserId__4D94879B">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserRole" EntitySet="UserRole" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
